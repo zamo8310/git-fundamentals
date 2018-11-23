@@ -1,0 +1,50 @@
+\begin{frame}[fragile]{Tracking: Summary}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+Basic Snapshotting
+      \begin{minted}[
+          breaklines,
+          frame=single,
+          fontsize=\footnotesize
+        ]{bash}
+git add
+git status
+git diff
+git commit
+git reset
+git checkout
+git rm
+      \end{minted}
+      \begin{flushleft}
+        Four file status: Untracked, Unmodified, Modified, or Staged.
+      \end{flushleft}
+      \begin{flushleft}
+        Three main areas: Working Tree, Staging Area, Git directory.
+      \end{flushleft}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+Plumbing Commands
+      \begin{minted}[
+          breaklines,
+          frame=single,
+          fontsize=\footnotesize
+        ]{bash}
+git cat-file
+git hash-object
+git ls-files
+      \end{minted}
+Git directory
+      \begin{minted}[
+          breaklines,
+          frame=single,
+          fontsize=\footnotesize
+        ]{bash}
+.git/index
+.git/objects
+      \end{minted}
+      \begin{flushleft}
+        Three typs of Git Objects: \break Blob, Tree, Commit
+      \end{flushleft}
+    \end{column}
+  \end{columns}
+\end{frame}

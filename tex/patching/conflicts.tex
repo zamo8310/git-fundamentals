@@ -1,0 +1,47 @@
+\begin{frame}[fragile]{Patching: Resolve Conflicts}
+  \begin{minted}[
+      breaklines,
+      frame=single,
+      fontsize=\footnotesize
+    ]{bash}
+> git merge iss53
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+  \end{minted}
+  \begin{columns}
+    \begin{column}{0.7\textwidth}
+        \begin{minted}[
+            breaklines,
+            frame=single,
+            fontsize=\footnotesize
+          ]{bash}
+<<<<<<< HEAD:index.html
+<div id="footer">
+  contact :
+  email.support@github.com
+</div>
+=======
+<h3 id="footer">
+  please contact us at
+  support@github.com
+</h3>
+>>>>>>> iss53:index.html
+        \end{minted}
+    \end{column}
+    \begin{column}{0.3\textwidth}
+      Helpful commands
+      \begin{minted}[
+          breaklines,
+          frame=single,
+          fontsize=\footnotesize
+        ]{bash}
+git merge --abort
+git rebase --abort
+git status
+git diff --check
+git mergetool
+      \end{minted}
+    \end{column}
+  \end{columns}
+\end{frame}

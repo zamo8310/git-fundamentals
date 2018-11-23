@@ -1,0 +1,58 @@
+\begin{frame}[fragile]{Branching, Merging and Patching: Summary}
+  \begin{columns}[t]
+    \begin{column}{0.5\textwidth}
+Basic Branching and Merging
+      \begin{minted}[
+          breaklines,
+          frame=single,
+          fontsize=\footnotesize
+        ]{bash}
+git branch 
+git checkout 
+git merge 
+git rebase 
+      \end{minted}
+Working with remote branches
+      \begin{minted}[
+          breaklines,
+          frame=single,
+          fontsize=\footnotesize
+        ]{bash}
+git remote -v
+git remote add
+git remote remove
+git fetch
+git push
+git pull
+      \end{minted}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      Git References
+      \begin{flushleft}
+        \footnotesize
+HEAD, branch, tag
+      \end{flushleft}
+Resolve Merge Conflicts
+      \begin{flushleft}
+        \footnotesize
+1. Locate the conflicts \break
+2. Resolve and stage the changes \break
+3. Continue merging
+      \end{flushleft}
+Undo a commit
+      \begin{minted}[
+          breaklines,
+          frame=single,
+          fontsize=\footnotesize
+        ]{bash}
+git reset
+git revert
+      \end{minted}
+    \end{column}
+  \end{columns}
+  \begin{flushleft}
+    \footnotesize
+    References \break
+    Chacon, S., \& Straub, B. (2014). Pro Git. New York, NY: Apress.
+  \end{flushleft}
+\end{frame}

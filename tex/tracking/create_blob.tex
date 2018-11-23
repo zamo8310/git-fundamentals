@@ -1,0 +1,59 @@
+\begin{frame}[fragile]{Tracking: Create a Git blob manually}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      1. Create a header
+      \begin{minted}[
+          breaklines,
+          frame=single,
+          fontsize=\footnotesize
+        ]{ruby}
+"blob #{content.length}\0"
+      \end{minted}
+      2. Create the SHA1 checksum
+      \begin{minted}[
+          breaklines,
+          frame=single,
+          fontsize=\footnotesize
+        ]{ruby}
+hash = Digest::SHA1.hexdigest(
+  header + content
+)
+      \end{minted}
+      3. Compresses the content
+      \begin{minted}[
+          breaklines,
+          frame=single,
+          fontsize=\footnotesize
+        ]{ruby}
+blob = Zlib::Deflate.deflate(
+  header + content
+)
+      \end{minted}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      4. Create the path for the blob
+      \begin{minted}[
+          breaklines,
+          frame=single,
+          fontsize=\footnotesize
+        ]{ruby}
+path = ".git/objects/#{
+  hash[0, 2]
+}/#{
+  hash[2, 38]
+}"
+FileUtils.mkdir_p(
+  File.dirname(path)
+)
+      \end{minted}
+      5. Save the blob as a file
+      \begin{minted}[
+          breaklines,
+          frame=single,
+          fontsize=\footnotesize
+        ]{ruby}
+File.write(path, blob)
+      \end{minted}
+    \end{column}
+  \end{columns}
+\end{frame}

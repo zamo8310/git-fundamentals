@@ -1,0 +1,45 @@
+\begin{frame}[fragile]{Tracking: Repository}
+  \begin{columns}[t]
+    \begin{column}{0.5\textwidth}
+      Getting a Git Repository
+      \begin{itemize}
+        \item Make a Git repository
+        \begin{minted}[
+            breaklines,
+            frame=single,
+            fontsize=\footnotesize
+          ]{bash}
+git init [directory]
+        \end{minted}
+        \item Clone a Git repository
+        \begin{minted}[
+            breaklines,
+            frame=single,
+            fontsize=\footnotesize
+          ]{bash}
+git clone <repository> [<directory>]
+        \end{minted}
+      \end{itemize}
+      \begin{center}
+        (\href{https://git-scm.com/doc}{Link to Documentation})
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      Subdirectory: .git
+      \begin{itemize}
+        \item Contains repository files
+        \begin{flushleft}
+          \footnotesize
+Every version of every file for the history of the project is pulled down by
+default when you run git clone.
+        \end{flushleft}
+        \item The skeleton for the repository
+        \begin{flushleft}
+          \footnotesize
+The source of magic. What are contained in the .git directory? 
+(\href{https://git-scm.com/book/en/v2/Git-Internals-Git-Objects}{Git Internals})
+        \end{flushleft}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}

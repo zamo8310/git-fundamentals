@@ -1,0 +1,19 @@
+\begin{frame}[fragile]{Patching: Reset}
+  \begin{figure}
+    \includegraphics[width=0.7\textwidth]{patching/undomerge-reset}
+    \caption{History after reset}
+  \end{figure}
+  \begin{minted}[
+      breaklines,
+      frame=single,
+      fontsize=\footnotesize
+    ]{bash}
+git reset --hard HEAD^
+  \end{minted}
+  \begin{itemize}
+    \footnotesize
+    \item Move the branch HEAD points to the commit: C6.
+    \item Make the index look like HEAD.
+    \item Make the working directory look like the index.
+  \end{itemize}
+\end{frame}

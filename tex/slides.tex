@@ -1,0 +1,28 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{multicol}
+
+% Enable hyphenation
+\usepackage{ragged2e}
+\let\raggedright=\RaggedRight
+
+% Change caption font size for figures
+\usepackage{caption}
+\captionsetup[figure]{font=scriptsize}
+
+% Use metropolis theme
+\usetheme{metropolis}
+
+\title{Git Fundamentals}
+\date{\today}
+\author{Donald Dong}
+\institute{CST438 Software Engineering @ Cal State Monterey Bay}
+\begin{document}
+  \maketitle
+  \input{intro/section}
+  \input{tracking/section}
+  \input{branching/section}
+  \input{patching/section}
+\end{document}
