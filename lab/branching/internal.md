@@ -4,6 +4,6 @@ A branch is a
 - [ ] Git Reference
 - [ ] A pointer to a blob
 - [ ] A pointer to a tree
-- [ ] A pointer to a commit
+- [X] A pointer to a commit
 
 # Explanation
